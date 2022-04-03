@@ -3,6 +3,7 @@ let express = require('express');
 let hbs = require('hbs');
 let app = express();
 let weather = require('./utils/weather');
+let port = process.env.PORT || 3000;
 
 
 /* app.get('',(req, res) => {
@@ -129,8 +130,8 @@ app.get('*',(req, res) => {
 
 
 
-app.listen(3000, () =>{
-	console.log('Server is live on port 3000. ');
+app.listen(port, () =>{
+	console.log('Server is live. ');
 	console.log('Open your web browser and go to the following url- localhost:3000');
 	console.log('To exit, come back to Node.js command prompt and enter CTRL+C');
 

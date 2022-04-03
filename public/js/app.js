@@ -35,7 +35,7 @@ weatherForm.addEventListener('submit', (e) => {
 	currentTime.textContent = '';
 
 
-	fetch('http://localhost:3000/weather?city='+city).then((response) => {
+	fetch('/weather?city='+city).then((response) => {
 	response.json().then((data) => {
 		//console.log(data);
 		if(data.error)
